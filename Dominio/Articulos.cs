@@ -8,5 +8,6 @@ namespace Dominio
 {
     internal class Articulos
     {
+
     }
 }
