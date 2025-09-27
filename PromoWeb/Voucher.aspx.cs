@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace PromoWeb
 {
-    public partial class Vouchers : System.Web.UI.Page
+    public partial class Voucher : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
