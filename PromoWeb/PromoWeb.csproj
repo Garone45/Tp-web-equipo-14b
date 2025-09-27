@@ -177,6 +177,7 @@
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Voucher.aspx" />
+    <Content Include="VoucherValido.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -222,6 +223,13 @@
     </Compile>
     <Compile Include="Voucher.aspx.designer.cs">
       <DependentUpon>Voucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VoucherValido.aspx.cs">
+      <DependentUpon>VoucherValido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VoucherValido.aspx.designer.cs">
+      <DependentUpon>VoucherValido.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
