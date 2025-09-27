@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Negocio;
 
 namespace PromoWeb
 {
@@ -16,12 +17,13 @@ namespace PromoWeb
         protected void btnValidar_Click(object sender, EventArgs e)
         {
             string codigo = txtVoucher.Text.Trim();
+            VouchersNegocio negocio = new VouchersNegocio();
 
-            // Validación de lógica contra la db? hay que traer la consulta de si el voucher es valido en la db.
-            if (!string.IsNullOrEmpty(codigo) && codigo == "ABC123")
+            if (negocio.CodigoExiste(codigo))
             {
                 lblMensaje.Visible = false;
-                // Aquí pones lo que debe pasar si el voucher es válido
+                Response.Redirect("VoucherValido.aspx?codigo=" + Server.UrlEncode(codigo));
+                // Aquí podés poner la acción si el voucher es válido
             }
             else
             {
