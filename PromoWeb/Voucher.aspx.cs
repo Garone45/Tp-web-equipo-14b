@@ -14,7 +14,7 @@ namespace PromoWeb
         {
 
         }
-        protected void btnValidar_Click(object sender, EventArgs e)
+        protected void btnValidar_Click(object sender, EventArgs e) 
         {
             string codigo = txtVoucher.Text.Trim();
             VouchersNegocio negocio = new VouchersNegocio();

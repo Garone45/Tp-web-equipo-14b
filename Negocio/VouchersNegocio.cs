@@ -13,7 +13,7 @@ namespace Negocio
         {
             bool existe = false;
             string connectionString = @"Server=.\SQLEXPRESS;Database=PROMOS_DB;Trusted_Connection=True;";
-            string query = "SELECT COUNT(*) FROM dbo.Vouchers WHERE CodigoVoucher = @codigo";
+            string query = "SELECT COUNT(*) FROM dbo.Vouchers WHERE CodigoVoucher = @codigo"; //, devuelve un único número: cuántas filas cumplen la condición (CodigoVoucher = @codigo).
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -21,10 +21,11 @@ namespace Negocio
                 {
                     cmd.Parameters.AddWithValue("@codigo", codigo);
                     con.Open();
-                    int count = (int)cmd.ExecuteScalar();
-                    existe = count > 0;
-                }
-            }
+                    int count = (int)cmd.ExecuteScalar(); // ExecuteScalar() devuelve un object genérico, así que se necesita convertirlo a entero usando (int).
+                                                          //después, se guarda en la variable count;
+                    existe = count > 0; // Si count es mayor que 0  el voucher existe.
+
+            }   }
 
             return existe;
         }
