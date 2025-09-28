@@ -16,6 +16,23 @@
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
+
+      <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/6c/69/1c/6c691cd4e3876b34cc1220d5e884bf36.jpg');
+            background-size: cover;       /* La imagen cubre toda la pantalla */
+            background-position: center;  /* Centrada */
+            background-repeat: no-repeat; /* Evita que se repita */
+            min-height: 100vh;            /* Asegura que cubra toda la altura */
+        }
+
+        /* Si quieres que el contenido tenga fondo semitransparente */
+        .body-content {
+            background-color: rgba(255,255,255,0.8);
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
     
 
 </head>
