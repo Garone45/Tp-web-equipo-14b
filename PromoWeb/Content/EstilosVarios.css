@@ -1,0 +1,40 @@
+﻿body {
+}
+
+.card-custom-novedades {
+    background-size: cover; /* 🔹 muestra la imagen completa */
+    background-repeat: no-repeat; /* 🔹 evita que se repita */
+    background-position: center; /* 🔹 centrada */
+    min-height: 600px; /* 🔹 altura mínima, pero crece si el contenido lo necesita */
+
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-custom-promo {
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    color: white;
+    position: relative;
+}
+
+card-custom-conjunto-textos {
+    flex: 1; /* ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra vertical dentro del body */
+    align-items: center; /* centra horizontal */
+}
+
+.laperla-logo {
+    width: 60px; /* ancho deseado */
+    height: auto; /* mantiene la proporción */
+    mix-blend-mode: lighten;
+}
+    

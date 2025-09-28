@@ -15,8 +15,8 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-
+    <webopt:bundlereference runat="server" path="~/Content/EstilosVarios.css" />
+    
       <style>
         body {
             background-image: url('https://i.pinimg.com/736x/6c/69/1c/6c691cd4e3876b34cc1220d5e884bf36.jpg');
