@@ -5,11 +5,11 @@
 
     <div class="card text-center">
         <div class="card-header">
-            Featured
+            ¡Nuevo!
         </div>
         <div class="card-body">
-            <h5 class="card-title">Nueva local de La Perla en San Fernando</h5>
-            <p class="card-text">
+            <h3 class="card-title mb-3 text-center text-uppercase fw-bold" style = "color: #ff6f61; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); letter-spacing: 1px;">Nuevo local de La Perla en San Fernando</h3>
+            <p class="card-text mx-auto text-justify mt-3" style="max-width: 600px;">
                 La Perla abrió sus puertas con una amplia variedad de artículos de computación, 
    laptops, accesorios gamer y lo último en tecnología. 
    Los primeros clientes podrán aprovechar descuentos especiales en placas de video, 
@@ -37,7 +37,7 @@
       </ul>
                 Solo por tiempo limitado, ¡no te lo pierdas!
             </p>
-            <a href="#" class="btn btn-warning">Ver Promo</a>
+            <a href="Voucher.aspx" class="btn btn-warning">Ver Promo</a>
         </div>
         <div class="card-footer text-body-secondary">
             Hasta agotar stock
