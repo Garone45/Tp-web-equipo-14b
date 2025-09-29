@@ -76,8 +76,8 @@
                 </div>
             </div>
         </nav>
-        <div class="container body-content">
-            <div class = "conteiner" >  
+        <div class="container body-content mb-4">
+            <div class = "container" >  
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 </asp:ContentPlaceHolder>
             </div>

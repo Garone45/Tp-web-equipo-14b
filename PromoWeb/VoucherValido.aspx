@@ -6,7 +6,7 @@
             <!-- Tarjeta 1 -->
             <div class="col-md-4 d-flex">
                 <div class="card flex-fill">
-                    <img src="img/mochila.jpg" class="card-img-top" alt="Mochila Gamer" />
+                    <img src="<%imagen%>" class="card-img-top" alt="Mochila Gamer" />
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Mochila Gamer</h5>
                         <p class="card-text">Mochila acolchada para laptop y accesorios gaming.</p>

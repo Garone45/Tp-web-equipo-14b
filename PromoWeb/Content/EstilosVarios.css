@@ -1,6 +1,6 @@
 ﻿body {
 }
-
+/*------------------------------------------------------------------------------------Tajeta novedades----------------------------------------------------------------------------------*/
 .card-custom-novedades {
     background-size: cover; /* 🔹 muestra la imagen completa */
     background-repeat: no-repeat; /* 🔹 evita que se repita */
@@ -16,15 +16,7 @@
     text-align: center;
 }
 
-.card-custom-promo {
-    background-size: cover;
-    background-position: center;
-    height: 600px;
-    color: white;
-    position: relative;
-}
-
-card-custom-conjunto-textos {
+.card-custom-conjunto-textos {
     flex: 1; /* ocupa todo el espacio disponible */
     display: flex;
     flex-direction: column;
@@ -37,4 +29,36 @@ card-custom-conjunto-textos {
     height: auto; /* mantiene la proporción */
     mix-blend-mode: lighten;
 }
-    
+.laperla-footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+/*------------------------------------------------------------------------------------ Tajeta Promo ----------------------------------------------------------------------------------*/
+
+.card-custom-promo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* 🔹 evita que se repita */
+
+
+    height: 600px;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-custom-promo-conjunto-textos {
+    flex: 1; /* ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra vertical dentro del body */
+    align-items: center; /* centra horizontal */
+}
