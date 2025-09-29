@@ -25,9 +25,50 @@ namespace Negocio
                                                           //después, se guarda en la variable count;
                     existe = count > 0; // Si count es mayor que 0  el voucher existe.
 
-            }   }
+                }
 
+            }
             return existe;
         }
+
+        public List<string> ObtenerImagenesArticulo(int articuloId)
+        {
+            List<string> urls = new List<string>();
+
+            // Cadena de conexión
+            string connectionString = @"Server=.\SQLEXPRESS;Database=PROMOS_DB;Trusted_Connection=True;"; ;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT ImagenUrl FROM Imagenes WHERE IdArticulo = @ArticuloId";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ArticuloId", articuloId);
+
+                    
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Agregamos la URL al listado
+                            urls.Add(reader["ImagenUrl"].ToString());
+                        }
+                    }
+                }
+            }
+
+            return urls;
+        }
+
+
     }
+
+    
+       
+    
 }
+
+
+
