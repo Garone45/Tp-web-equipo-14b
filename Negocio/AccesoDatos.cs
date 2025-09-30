@@ -51,7 +51,7 @@ namespace Negocio
             }
         }
 
-        // Ejecutar acción (insert/update/delete)
+        /// Ejecutar acción (insert/update/delete)
         public void ejecutarAccion()
         {
             comando.Connection = conexion;
