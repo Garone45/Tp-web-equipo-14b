@@ -83,17 +83,34 @@ namespace Negocio
         public bool CodigoExiste(string codigo)
         {
             bool existe = false;
-            setearConsulta("SELECT COUNT(*) FROM Vouchers WHERE CodigoVoucher = @codigo");
+            setearConsulta("SELECT CodigoVoucher, FechaCanje FROM Vouchers WHERE CodigoVoucher = @codigo");
             setearParametro("@codigo", codigo);
             ejecutarLectura();
 
             if (Lector.Read())
             {
-                int count = (int)Lector[0];
-                existe = count > 0;
-            }
+                if(Lector["FechaCanje"] == DBNull.Value)
+                {
+                    existe = true;
+                    cerrarConexion(); // Cerramos lectura antes de hacer el UPDATE
 
-            cerrarConexion();
+                    // Ahora actualizamos la fecha de canje
+                    setearConsulta("UPDATE Vouchers SET FechaCanje = @fecha WHERE CodigoVoucher = @codigo");
+                    setearParametro("@fecha", DateTime.Now);
+                    setearParametro("@codigo", codigo);
+                    ejecutarLectura(); // o ejecutarAccion si tenés un método para UPDATE
+                    cerrarConexion();
+
+                }
+                else if (Lector["FechaCanje"] != DBNull.Value)
+                {
+                    existe = false;
+                }
+              
+            }
+            
+
+                cerrarConexion();
             return existe;
         }
 

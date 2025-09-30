@@ -27,9 +27,16 @@ namespace PromoWeb
             }
             else
             {
-                lblMensaje.Text = "El voucher es inválido";
+                lblModalMensaje.Text = "El código de voucher no es válido.";
                 lblMensaje.Visible = true;
             }
+
+            string script = @"
+            var modal = new bootstrap.Modal(document.getElementById('mensajeModal'));
+            modal.show();";
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "ShowModal", script, true);
+
         }
     }
 }
