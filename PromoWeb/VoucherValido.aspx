@@ -102,5 +102,10 @@
             height: 200px;        /* ajustá este valor si querés más grande/chico */
             object-fit: cover;    /* recorta y centra la imagen */
         }
+        .img-container img {
+    width: 100%;        /* ocupa todo el ancho */
+    height: 1000%;       /* ocupa toda la altura del contenedor */
+    object-fit: cover;  /* centra y recorta sin deformar */
+}
     </style>
 </asp:Content>
