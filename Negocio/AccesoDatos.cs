@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Net.Configuration;
 
 namespace Negocio
 {
@@ -14,42 +10,40 @@ namespace Negocio
         private SqlCommand comando;
         private SqlDataReader lector;
 
-        public SqlDataReader Lector // De este modo leemos el lector desde afuera.
-        {
-            get { return Lector; }
-        }
+        public SqlDataReader Lector => lector;
 
-        public AccesoDatos() //Constructor
+        public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database = CATALOGO_P3_DB; integrated security=true ");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=PROMOS_DB; integrated security=true");
             comando = new SqlCommand();
         }
-        public void setearConsulta(string consulta) // Encapsulamos consulta
+
+        // Preparar la consulta y limpiar parámetros previos
+        public void setearConsulta(string consulta)
         {
-            comando.CommandType = System.Data.CommandType.Text;
+            comando.Parameters.Clear();   // limpiamos cualquier parámetro viejo
             comando.CommandText = consulta;
+            comando.CommandType = System.Data.CommandType.Text;
+
+            // Cerramos la conexión anterior si quedó abierta
+            if (conexion.State == System.Data.ConnectionState.Open)
+                conexion.Close();
         }
-        public void ejecutarLectura() // Metodo para ejecutar lectura y guardar en el lector
+
+        public void setearParametro(string nombre, object valor)
+        {
+            // Usamos DBNull.Value si el valor es null
+            comando.Parameters.AddWithValue(nombre, valor ?? DBNull.Value);
+        }
+
+        // Ejecutar consulta que devuelve datos
+        public void ejecutarLectura()
         {
             comando.Connection = conexion;
             try
             {
                 conexion.Open();
-                lector=comando.ExecuteReader();
-
-            }
-            catch (Exception ex) 
-            {
-                throw ex;
-            }
-        }
-        public void ejecutarAccion() //insertar 
-        {
-            comando.Connection=conexion;
-            try
-            {
-                conexion.Open();
-                lector=comando.ExecuteReader();
+                lector = comando.ExecuteReader();
             }
             catch (Exception ex)
             {
@@ -57,21 +51,67 @@ namespace Negocio
             }
         }
 
-        public void setearParametro(string nombre, object valor) // darle valor a las "variables" que creamos para insertar datos ej (@nombre,Francisco);
+        // Ejecutar acción (insert/update/delete)
+        public void ejecutarAccion()
         {
-            comando.Parameters.AddWithValue(nombre, valor);
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-
+        // Cerrar lector y conexión
         public void cerrarConexion()
         {
-            if(lector!=null) 
-            conexion.Close();
-            //lector.Close();
-           
+            if (lector != null)
+            {
+                lector.Close();
+                lector = null;
+            }
+
+            if (conexion.State == System.Data.ConnectionState.Open)
+                conexion.Close();
         }
 
+        // Consulta si existe un voucher
+        public bool CodigoExiste(string codigo)
+        {
+            bool existe = false;
+            setearConsulta("SELECT COUNT(*) FROM Vouchers WHERE CodigoVoucher = @codigo");
+            setearParametro("@codigo", codigo);
+            ejecutarLectura();
 
+            if (Lector.Read())
+            {
+                int count = (int)Lector[0];
+                existe = count > 0;
+            }
 
+            cerrarConexion();
+            return existe;
+        }
+
+        // Obtener imágenes de un artículo
+        public List<string> ObtenerImagenesArticulo(int articuloId)
+        {
+            List<string> urls = new List<string>();
+            setearConsulta("SELECT ImagenUrl FROM IMAGENES WHERE IdArticulo = @IdArticulo");
+            setearParametro("@IdArticulo", articuloId);
+            ejecutarLectura();
+
+            while (Lector.Read())
+            {
+                urls.Add(Lector["ImagenUrl"].ToString());
+            }
+
+            cerrarConexion();
+            return urls;
+        }
     }
 }
