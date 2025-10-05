@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 <div class="container mt-4">
-    <h1 class="mb-4">Voucher válido — Seleccioná tu premio</h1>
+    <h1 class="mb-4">Seleccioná tu premio</h1>
 
     <div class="row">
         <asp:Repeater ID="repArticulos" runat="server" OnItemDataBound="repArticulos_ItemDataBound">
@@ -30,7 +30,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><%# Eval("Nombre") %></h5>
                             <p class="card-text"><%# Eval("Descripcion") %></p>
-                            <a href="#" class="btn btn-success w-100">Seleccionar</a>
+                            <a href="Usuarios.aspx" class="btn btn-success w-100">Seleccionar</a>
                         </div>
                     </div>
                 </div>
@@ -41,8 +41,9 @@
 
 <style>
     .card-img-top {
-        height: 200px;
-        object-fit: cover;
+        height: 300px;
+        object-fit: contain
+
     }
 </style>
 

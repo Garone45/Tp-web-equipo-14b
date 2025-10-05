@@ -34,13 +34,13 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Atención</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="window.location.href='Default.aspx'" aria-label="Volver al inicio"></button>
           </div>
           <div class="modal-body">
             <asp:Label ID="lblModalMensaje" runat="server" Text=""></asp:Label>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="window.location.href='Default.aspx'">Volver al inicio</button>
           </div>
         </div>
       </div>
