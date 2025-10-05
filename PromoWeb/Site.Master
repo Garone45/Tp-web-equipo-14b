@@ -71,21 +71,19 @@
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <asp:HyperLink ID="hlVouchers" runat="server" NavigateUrl="~/Voucher.aspx" CssClass="nav-link">Voucher</asp:HyperLink>
-                        <!--<li class="nav-item"><a class="nav-link" runat="server" href="~/Vouchers">Voucher</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About">Acerca de</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contacto</a></li>-->
+                       
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container body-content mb-4">
+        <div class="container body-content mt-4">
             <div class = "container" >  
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
+                <p>&copy; <%: DateTime.Now.Year %> - La Perla en ASP.NET</p>
             </footer>
         </div>
     </form>

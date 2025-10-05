@@ -51,7 +51,7 @@
                     Acepto los términos y condiciones
                 </label>
 
-                <!-- Mensaje de error (opcional) -->
+                <!-- Mensaje de error -->
                 <div id="chkError" class="text-danger mt-1" style="display: none; font-size: 0.85rem;">
                     Debe aceptar los términos y condiciones para continuar.
                 </div>
@@ -64,7 +64,7 @@
     </div>
 
 
-    <!-- Modal de éxito -->
+    <!-- Modal de Exito -->
 <div class="modal fade" id="modalExito" tabindex="-1" aria-labelledby="modalExitoLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -84,11 +84,13 @@
 
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const dniInput = document.getElementById("<%= txtDni.ClientID %>");
-    const emailInput = document.getElementById("<%= txtEmail.ClientID %>");
-    const buscarBtn = document.getElementById("<%= btnBuscar.ClientID %>");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dniInput = document.getElementById("<%= txtDni.ClientID %>");
+        const emailInput = document.getElementById("<%= txtEmail.ClientID %>");
+        const buscarBtn = document.getElementById("<%= btnBuscar.ClientID %>");
+        const chk = document.getElementById("<%= chkTerminos.ClientID %>");
+        const chkError = document.getElementById("chkError"); 
 
     // Crear contenedor para el mensaje del DNI
     const dniError = document.createElement("div");
@@ -125,6 +127,8 @@
         }
     });
 
+            
+
     // Validación DNI antes de buscar
     buscarBtn.addEventListener("click", function (e) {
         const dni = dniInput.value.trim();
@@ -141,8 +145,19 @@
             
         }
     });
+
+        chk.addEventListener("change", function () {
+            if (chk.checked) {
+                chkError.style.display = "none";
+            }
+        });
+        chk.addEventListener("change", function () {
+            if (chk.checked) {
+                chkError.style.display = "none"; // si lo tilda, se oculta el mensaje
+            }
+        });
 });
-</script>
+    </script>
 
     <script>
         function validarCampos() {
@@ -155,9 +170,11 @@
             const cp = document.getElementById("<%= txtCP.ClientID %>");
             const chk = document.getElementById("<%= chkTerminos.ClientID %>"); 
             const camposError = document.getElementById("camposError");
+            const chkError = document.getElementById("chkError"); 
 
             let error = false;
             camposError.style.display = "none";
+            chkError.style.display = "none";
 
             // Limpiar clases previas
             [dni, nombre, apellido, email, direccion, ciudad, cp].forEach(input => input.classList.remove("is-invalid"));

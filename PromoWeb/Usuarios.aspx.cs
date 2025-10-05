@@ -67,7 +67,7 @@ namespace PromoWeb
             }
             catch (Exception ex)
             {
-                // Podés loguear o mostrar error
+                
                 Response.Write("<script>alert('Error al buscar cliente: " + ex.Message + "');</script>");
             }
             finally

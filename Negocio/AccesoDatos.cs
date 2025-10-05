@@ -18,7 +18,7 @@ namespace Negocio
             comando = new SqlCommand();
         }
 
-        // Preparar la consulta y limpiar parámetros previos
+        
         public void setearConsulta(string consulta)
         {
             comando.Parameters.Clear();   // limpiamos cualquier parámetro viejo
@@ -36,7 +36,7 @@ namespace Negocio
             comando.Parameters.AddWithValue(nombre, valor ?? DBNull.Value);
         }
 
-        // Ejecutar consulta que devuelve datos
+        
         public void ejecutarLectura()
         {
             comando.Connection = conexion;
@@ -51,7 +51,7 @@ namespace Negocio
             }
         }
 
-        /// Ejecutar acción (insert/update/delete)
+       
         public void ejecutarAccion()
         {
             comando.Connection = conexion;
@@ -66,7 +66,7 @@ namespace Negocio
             }
         }
 
-        // Cerrar lector y conexión
+        
         public void cerrarConexion()
         {
             if (lector != null)
@@ -98,7 +98,7 @@ namespace Negocio
                     setearConsulta("UPDATE Vouchers SET FechaCanje = @fecha WHERE CodigoVoucher = @codigo");
                     setearParametro("@fecha", DateTime.Now);
                     setearParametro("@codigo", codigo);
-                    ejecutarLectura(); // o ejecutarAccion si tenés un método para UPDATE
+                    ejecutarLectura(); 
                     cerrarConexion();
 
                 }

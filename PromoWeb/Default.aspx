@@ -17,10 +17,7 @@
    periféricos y combos de PC armadas.
             </p>
         </div>
-        <div class="laperla-footer text-center mt-4">
-            <img src="https://us.123rf.com/450wm/fillvector/fillvector2202/fillvector220209517/182757898-icono-de-auriculares-de-l%C3%ADnea-de-ne%C3%B3n-brillante-aislado-sobre-fondo-negro-auriculares-concepto.jpg?ver=6" alt="Logo Empresa" class="laperla-logo" />
-            <h4 class="card-tile mb-2">La Perla</h4>
-        </div>
+        
     </div>
 
     <!-- Tarjeta Promo-->

@@ -8,12 +8,12 @@
                     <div class="card-body">
                         <h5 class="card-title text-center mb-4">Ingrese su Voucher</h5>
 
-                        <!-- TextBox de código del voucher -->
+                        <!-- TextBox de CODIGO del voucher -->
                         <div class="mb-3">
                             <asp:TextBox ID="txtVoucher" runat="server" CssClass="form-control mx-auto" Style="width: 250px;" placeholder="Ej: ABC12345"></asp:TextBox>
                         </div>
 
-                        <!-- Botón Validar -->
+                        <!-- BOTON Validar -->
                         <div class="d-grid mb-2">
                             <asp:Button ID="btnValidar" runat="server" Text="Validar" CssClass="btn btn-success mx-auto" Style="width: 250px;" OnClick="btnValidar_Click" />
                         </div>
