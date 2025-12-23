@@ -21,13 +21,13 @@ El objetivo principal es permitir que los clientes canjeen premios a través de 
 ## 📸 Capturas de Pantalla
 
 ### 1. Pantalla de inico
-![Login Voucher](<<img width="1211" height="876" alt="Image" src="https://github.com/user-attachments/assets/72447c0c-b23f-46c9-93ca-5df771ca8885" />)
+<<img width="1211" height="876" alt="Image" src="https://github.com/user-attachments/assets/72447c0c-b23f-46c9-93ca-5df771ca8885" />
 
 ### 2. Selección de Premios
-![Catalogo Premios](<<img width="1225" height="746" alt="Image" src="https://github.com/user-attachments/assets/36239d75-5396-4b75-9e0c-22fa690b2616" />)
+<<img width="1225" height="746" alt="Image" src="https://github.com/user-attachments/assets/36239d75-5396-4b75-9e0c-22fa690b2616" />
 
 ### 3. Ingreso de datos
-![Confirmacion](<<img width="1247" height="602" alt="Image" src="https://github.com/user-attachments/assets/35379389-e155-4ba3-9e52-4d7cff4e200d" />)
+<<img width="1247" height="602" alt="Image" src="https://github.com/user-attachments/assets/35379389-e155-4ba3-9e52-4d7cff4e200d" />
 
 ---
 
