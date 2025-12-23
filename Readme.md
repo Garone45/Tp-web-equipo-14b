@@ -15,17 +15,14 @@ El objetivo principal es permitir que los clientes canjeen premios a través de 
 - **Gestión de Clientes:** Registro de datos del usuario al momento del canje.
 - **Catálogo de Premios:** Selección de productos disponibles asociados al voucher.
 - **Control de Stock:** Validación de disponibilidad de premios antes de confirmar el canje.
-- **Panel Administrativo:** (Si lo tiene) ABM de productos y reportes de canjes.
 
 ---
 
 ## 📸 Capturas de Pantalla
 
-> *¡Una imagen vale más que mil líneas de código! Aquí puedes ver el flujo del sistema.*
-
 ### 1. Pantalla de inico
 *(Muestra aquí el inicio de la web)*
-![Login Voucher](<img width="1211" height="876" alt="Image" src="https://github.com/user-attachments/assets/0c894bca-7602-4b3c-965f-e0f05e5832ce" />)
+![Login Voucher](<<img width="1211" height="876" alt="Image" src="https://github.com/user-attachments/assets/72447c0c-b23f-46c9-93ca-5df771ca8885" />)
 
 ### 2. Selección de Premios
 *(Muestra el catálogo o la lista de productos a elegir)*
@@ -33,7 +30,7 @@ El objetivo principal es permitir que los clientes canjeen premios a través de 
 
 ### 3. Ingreso de datos
 *(Muestra el ingreso de datos del usuario)*
-![Confirmacion](<img width="1247" height="602" alt="Image" src="https://github.com/user-attachments/assets/51d8f3a1-7fd4-4ee0-bfb9-e3bebd5f5402" />)
+![Confirmacion](<img width="1247" height="602" alt="Image" src="https://github.com/user-attachments/assets/35379389-e155-4ba3-9e52-4d7cff4e200d" />)
 
 ---
 
@@ -55,4 +52,4 @@ Si deseas clonar y probar este proyecto localmente:
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/Garone45/NOMBRE-DEL-REPO.git](https://github.com/Garone45/NOMBRE-DEL-REPO.git)
+   git clone [https://github.com/Garone45/Tp-web-equipo-14b](https://github.com/Garone45/Tp-web-equipo-14b)
