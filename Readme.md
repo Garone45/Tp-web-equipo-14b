@@ -21,15 +21,12 @@ El objetivo principal es permitir que los clientes canjeen premios a través de 
 ## 📸 Capturas de Pantalla
 
 ### 1. Pantalla de inico
-*(Muestra aquí el inicio de la web)*
 ![Login Voucher](<<img width="1211" height="876" alt="Image" src="https://github.com/user-attachments/assets/72447c0c-b23f-46c9-93ca-5df771ca8885" />)
 
 ### 2. Selección de Premios
-*(Muestra el catálogo o la lista de productos a elegir)*
 ![Catalogo Premios](<<img width="1225" height="746" alt="Image" src="https://github.com/user-attachments/assets/36239d75-5396-4b75-9e0c-22fa690b2616" />)
 
 ### 3. Ingreso de datos
-*(Muestra el ingreso de datos del usuario)*
 ![Confirmacion](<<img width="1247" height="602" alt="Image" src="https://github.com/user-attachments/assets/35379389-e155-4ba3-9e52-4d7cff4e200d" />)
 
 ---
@@ -41,14 +38,14 @@ El proyecto fue construido siguiendo una arquitectura en capas para asegurar esc
 - **Lenguaje:** C#
 - **Framework:** .NET Framework / ASP.NET (Web Forms o MVC)
 - **Base de Datos:** SQL Server
-- **Frontend:** HTML5, CSS3, Bootstrap (si usaste).
+- **Frontend:** HTML5, CSS3, Bootstrap
 - **Control de Versiones:** Git & GitHub
 
 ---
 
 ## 🔧 Instalación y Puesta en Marcha
 
-Si deseas clonar y probar este proyecto localmente:
+
 
 1. **Clonar el repositorio:**
    ```bash
