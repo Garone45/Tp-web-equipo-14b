@@ -26,11 +26,11 @@ El objetivo principal es permitir que los clientes canjeen premios a través de 
 
 ### 2. Selección de Premios
 *(Muestra el catálogo o la lista de productos a elegir)*
-![Catalogo Premios]<img width="1225" height="746" alt="Image" src="https://github.com/user-attachments/assets/36239d75-5396-4b75-9e0c-22fa690b2616" />)
+![Catalogo Premios](<<img width="1225" height="746" alt="Image" src="https://github.com/user-attachments/assets/36239d75-5396-4b75-9e0c-22fa690b2616" />)
 
 ### 3. Ingreso de datos
 *(Muestra el ingreso de datos del usuario)*
-![Confirmacion](<img width="1247" height="602" alt="Image" src="https://github.com/user-attachments/assets/35379389-e155-4ba3-9e52-4d7cff4e200d" />)
+![Confirmacion](<<img width="1247" height="602" alt="Image" src="https://github.com/user-attachments/assets/35379389-e155-4ba3-9e52-4d7cff4e200d" />)
 
 ---
 
